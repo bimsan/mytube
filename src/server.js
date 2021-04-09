@@ -1,10 +1,12 @@
 import express from "express";
 
-const PORT = 4000;
-
 const app = express();
 
-const handleHome = () => console.log("Somebody is trying to go home.");
+const PORT = 4000;
+
+const handleHome = (req, res) => {
+  return res.end();
+};
 
 app.get("/", handleHome);
 
