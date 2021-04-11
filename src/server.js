@@ -4,16 +4,7 @@ const app = express();
 
 const PORT = 4000;
 
-const logger = (req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-};
-
-const handleHome = (req, res) => {
-  return res.send("<strong>Welcome Home</strong>");
-};
-
-app.use(logger);
+const handleHome = () => console.log("Home");
 
 app.get("/", handleHome);
 
