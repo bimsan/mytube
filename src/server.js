@@ -4,9 +4,8 @@ const app = express();
 
 const PORT = 4000;
 
-const handleHome = () => console.log("Home");
-
-app.get("/", handleHome);
+const home = (req, res) => res.send("<h1>Hello!</h1>");
+app.get("/", home);
 
 // ---------------------------------------------------------
 
